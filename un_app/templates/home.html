@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Un Population plots (JS) - saikiran</title>  
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="{% static 'plot.js' %}"></script>
+    <link rel='icon' href="{% static 'icon.png' %}">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+  </head>
+
+  <body onload="view_plot('plot1')">
+    <nav>
+      <h1 id='nav-heading'>Un Population Plots</h1>
+      <hr>
+      <section id='menu'>
+        <h3 class='plot' id='plot1' onclick="view_plot('plot1')">Plot-1</h3>
+        <h3 class='plot' id='plot2' onclick="view_plot('plot2')">Plot-2</h3>
+        <h3 class='plot' id='plot3' onclick="view_plot('plot3')">Plot-3</h3>
+        <h3 class='plot' id='plot3' onclick="view_plot('plot4')">Plot-4</h3>
+      </section>
+    </nav>
+
+    <div id='input-div'>
+      <span id="which_plot" ></span>
+      <span class='span-style'>Year : </span><input type="number" onchange="send_request()" name="start"  min="1950" max="2015" value="1950" id="start">
+      <span id='range'>Range : 
+
+      <select name="range" id='end' onchange="send_request()">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select></span>
+
+      <span class='span-style2'>Region : </span>
+      
+      <select name="region" id="region" onchange="send_request()">
+        <option value="India">India</option>
+        <option value="Pakistan">Pakistan</option>
+        <option value="Myanmar">Myanmar</option>
+        <option value="Germany">Germany</option>
+        <option value="Italy">Italy</option>
+        <option value="Japan">Japan</option>
+        <option value="Nepal">Nepal</option>
+        <option value="Canada">Canada</option>
+        <option value="France">France</option>
+        <option value="Philippines">Philippines</option>
+        <option value="Malaysia">Malaysia</option>
+      </select>
+
+      <select name="region_group" id="region_group" onchange="send_request()">
+        <option value="ASEAN">ASEAN</option>
+        <option value="BRICS">BRICS</option>
+        <option value="G4">G4</option>
+        <option value="G7">G7</option>
+        <option value="SAARC">SAARC</option>
+      </select>
+    </div>
+
+    <br><br>
+
+    <div id="container"></div>
+
+
+  </body>
+
+</html>

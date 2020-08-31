@@ -1,0 +1,79 @@
+body
+{
+    margin:0;
+}
+
+nav
+{
+    background-color: hotpink;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+#nav-heading
+{
+    text-align: center;
+    color:darkred;
+    margin:10px;
+}
+
+#menu
+{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    color:blue;
+}
+
+.plot
+{
+    margin:10px;
+}
+
+.plot:hover
+{
+    cursor: pointer;
+    text-decoration: overline;
+    color: yellow;
+}
+
+#input-div
+{
+    margin-top:120px;
+    text-align:center;
+}
+
+#which_plot
+{
+    color:green;
+}
+
+.span-style
+{
+    color:red;
+    margin-left:20px;
+}
+
+#range
+{
+    color:red;
+    margin-left:20px;
+}
+
+#start
+{
+    width:100px;
+}
+
+.span-style2
+{
+    color:red;
+    margin-left:20px;
+}
+
+#container
+{
+    max-width:100%;
+    height:500px;
+}
